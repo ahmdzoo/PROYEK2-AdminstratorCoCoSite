@@ -381,10 +381,19 @@
                         </a>
                         <div class="collapse" id="auth">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="{{ URL::to('logout') }}"> Log Out </a>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Log Out
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        style="display: none;">
+                                        @csrf
+                                    </form>
                                 </li>
-                                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Profile
-                                    </a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/samples/register.html">Profile</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
