@@ -367,10 +367,13 @@
                         </a>
                         <div class="collapse" id="charts">
                             <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Riwayat
-                                        Transaksi</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('transaction_logs.index') }}">Riwayat
+                                        Transaksi</a>
+                                </li>
                             </ul>
                         </div>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false"
